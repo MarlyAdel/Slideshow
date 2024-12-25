@@ -1,0 +1,71 @@
+
+.animated-title{
+    font-size: 3.5rem;
+    font-weight: bold;
+    background: linear-gradient(90deg, #ff007c, #ffae00);
+    background-clip: text;
+    color: transparent;
+    opacity: 0;
+    transform: scale(0.8);
+    animation: fadeInScale 2s ease-in-out forwards, gradientMove 3s linear infinite;
+}
+@keyframes fadeInScale {
+    0% {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    100% {
+        background-position: 100% 50%;
+    }
+}
+figure{
+    cursor: pointer;
+}
+.img-caption{
+    top: 200px;
+    width: 95%;
+    left: 2%;
+    background-image: linear-gradient(rgba(0,0,0,0.7),rgba(0, 0, 0, 0.7));
+    color: white;
+}
+#lightBox{
+    background-color: rgba(0, 0, 0, 0.6);
+}
+#lightBoxItem{
+    width: 30%;
+    height: 80vh;
+    background-image: url(../Images/titanc.jpg);
+    background-size: cover;
+    background-position: center;
+}
+#lightBoxItem i{
+    font-size: 20px;
+    margin: 10px;
+    cursor: pointer;
+}
+#close{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+@media (max-width:768px){
+    .animated-title{
+        font-size: 2.5rem;
+    }
+    #lightBoxItem{
+        width: 100%;
+    }
+}
